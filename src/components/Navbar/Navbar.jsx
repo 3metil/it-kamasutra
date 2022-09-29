@@ -1,17 +1,19 @@
 import React from 'react';
 import './Navbar.scss'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return <nav className='nav'>
         <div>
-            <p>
-                Profile
+            
+            <p>    
+            <Link to='/profile'>Profile</Link>
             </p>
             <p>
-                Messages
+            <Link to='/dialogs'>Messages</Link> 
             </p>
             <p>
-                News
+            <Link to='/news'>News</Link>    
             </p>        <p>
                 Music
             </p>
