@@ -3,13 +3,17 @@ import './MyPosts.scss'
 import MyPost from './Post/MyPost';
 
 const MyPosts = (props) => {
-  
-  
+
+
   let postData = [
     { id: 1, message: 'Hi, how are you?', likeCount: 12 },
-    { id: 2, message: 'It\'s my first post', likeCount: 11 }
+    { id: 2, message: 'It\'s my first post', likeCount: 11 },
+    { id: 3, message: 'It\'s my second post', likeCount: 11 },
+    { id: 4, message: 'It\'s my third post', likeCount: 11 }
 
-]
+  ]
+
+  let postsElements = postData.map(p => <MyPost message={p.message} likes={p.likeCount} />)
 
   return (
     <div>
@@ -19,8 +23,10 @@ const MyPosts = (props) => {
         <button>Add post</button>
         <button>Remove</button>
       </div>
-      <MyPost message={postData[0].message} likes={postData[0].likeCount}/>
-      <MyPost message={postData[1].message} likes={postData[1].likeCount}/>
+      
+      { postsElements }
+      
+
     </div>
   )
 }
