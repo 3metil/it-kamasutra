@@ -8,7 +8,10 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouter from './components/AppRouter';
 
 
-const App = () => {
+const App = (props) => {
+  
+
+  
   return (
 
     <div className='content'>
@@ -21,7 +24,7 @@ const App = () => {
         <div className='app-wrapper'>
           <Header />
           <Navbar />
-          <AppRouter />
+          <AppRouter postData = {props.postData} dialogsData = {props.dialogsData} messagesData = {props.messagesData} />
         </div>
 
 
